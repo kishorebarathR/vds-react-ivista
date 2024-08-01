@@ -1,5 +1,5 @@
 import React from 'react';
-import MyConstituency from "../../components/my-constituencyComponents"
+import MyConstituency from "@/Components/my-constituencyComponents"
 const page = () => {
     return (
         <>

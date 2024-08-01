@@ -1,5 +1,5 @@
 import React from 'react';
-import SincerelyMe from "../../Components/SincerelyMeComponents"
+import SincerelyMe from "@/Components/SincerelyMeComponents"
 const page = () => {
     return (
         <div>
