@@ -340,7 +340,7 @@ const VideoPlayer = () => {
                 >
                   <div className="flex items-center space-x-4">
                     <div className="lg:w-200 lg:h-110">
-                      <img
+                      <Image
                         src={`https://img.youtube.com/vi/${
                           video.url.split("/")[4]
                         }/0.jpg`}
