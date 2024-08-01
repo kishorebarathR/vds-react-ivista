@@ -69,7 +69,7 @@ const Homepage = () => {
                 VD Satheesan…
               </h6>
               <button className="border lg:border-4 border-sky-800 p-2 items-center justify-center bg-white rounded-sm text-[#035C96] text-xl  mt-5 w-40 mb-5 merriweather-regular">
-                Know Me ME you HOW how
+                Know Me
               </button>
             </div>
           </div>

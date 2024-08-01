@@ -251,6 +251,7 @@ const VideoPlayer = () => {
     },
   ]
 
+
   const handleVideoClick = (video) => {
     // Update the URL with autoplay parameter
     const updatedVideo = {
@@ -264,98 +265,98 @@ const VideoPlayer = () => {
     <>
       <div className="bg-[url('/home_images/about_satheesan_background.png')] w-full h-full pb-10">
         <p className="text-4xl text-[#035C96] text-center font-semibold pt-10 ">
-          Getting Candid
+        Getting Candid
         </p>
         <p className="text-xl text-center font-semibold pt-4">
           ‘Dialogue with VDS’ is a series of weekly in-depth interviews with
           experts from various fields
         </p>
-
-        <div className="container mx-auto p-4 ">
-          <div className="flex flex-col md:flex-row gap-4">
-            {/* Main video player */}
-            <div className="w-full lg:w-2/3 mt-7 ">
-              <div className="aspect-w-16  aspect-h-9 hidden sm:block  ">
-                <iframe
-                  width="900"
-                  height="500"
-                  src={currentVideo.url}
-                  title="Main Video Player"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
-              </div>
-
-              <div className="aspect-w-16  aspect-h-9 lg:hidden  ">
-                <iframe
-                  width="360"
-                  height="300"
-                  src={currentVideo.url}
-                  title="Main Video Player"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
-              </div>
-
-              <div className="relative overflow-hidden w-full aspect-w-16 aspect-h-9">
-                {/* <!-- Responsive iframe --> */}
-                <iframe
-                  className="absolute inset-0 w-full h-full"
-                  src={currentVideo.url}
-                  title="Main Video Player"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
-              </div>
-              <div className="mt-4">
-                <p className="text-2xl font-semibold">{currentVideo.title}</p>
-                <p className="text-lg mt-2">{currentVideo.description}</p>
-              </div>
-              <div className="mt-5">
-                <a
-                  href="https://www.youtube.com/c/dialoguewithvds/videos"
-                  target="_blank"
-                  class="focus:outline-none text-white bg-red-700 hover:bg-red-800  font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
-                >
-                  Subscribe
-                </a>
-              </div>
+    
+      <div className="container mx-auto p-4 ">
+        <div className="flex flex-col md:flex-row gap-4">
+          {/* Main video player */}
+          <div className="w-full lg:w-2/3 mt-7 ">
+            <div className="aspect-w-16  aspect-h-9 hidden sm:block  ">
+              <iframe
+                width="900"
+                height="500"
+                src={currentVideo.url}
+                title="Main Video Player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
             </div>
 
-            {/* Playlist */}
-            <div className="w-full lg:w-1/3">
-              <h2 className="text-xl bg-red-700 me-4 mt-7 text-white  text-center">
-                Playlist
-              </h2>
-              <div className="flex flex-col gap-2 h-[100vh] p-3   overflow-y-auto">
-                {videos.map((video, index) => (
-                  <div
-                    key={index}
-                    className="flex-1 cursor-pointer "
-                    onClick={() => handleVideoClick(video)}
-                  >
-                    <div className="flex items-center space-x-4">
-                      <div className="lg:w-200 lg:h-110">
-                        <img
-                          src={`https://img.youtube.com/vi/${
-                            video.url.split("/")[4]
-                          }/0.jpg`}
-                          alt={video.title}
-                          className="w-full h-full object-cover"
-                          width={100}
-                          height={100}
-                        />
-                      </div>
+            <div className="aspect-w-16  aspect-h-9 lg:hidden  ">
+              <iframe
+                width="360"
+                height="300"
+                src={currentVideo.url}
+                title="Main Video Player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+
+            <div className="relative overflow-hidden w-full aspect-w-16 aspect-h-9">
+              {/* <!-- Responsive iframe --> */}
+              <iframe
+                className="absolute inset-0 w-full h-full"
+                src={currentVideo.url}
+                title="Main Video Player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+            <div className="mt-4">
+              <p className="text-2xl font-semibold">{currentVideo.title}</p>
+              <p className="text-lg mt-2">{currentVideo.description}</p>
+            </div>
+            <div className="mt-5">
+              <a
+                href="https://www.youtube.com/c/dialoguewithvds/videos"
+                target="_blank"
+                class="focus:outline-none text-white bg-red-700 hover:bg-red-800  font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
+              >
+                Subscribe
+              </a>
+            </div>
+          </div>
+
+          {/* Playlist */}
+          <div className="w-full lg:w-1/3">
+            <h2 className="text-xl bg-red-700 me-4 mt-7 text-white  text-center">
+              Playlist
+            </h2>
+            <div className="flex flex-col gap-2 h-[100vh] p-3   overflow-y-auto">
+              {videos.map((video, index) => (
+                <div
+                  key={index}
+                  className="flex-1 cursor-pointer "
+                  onClick={() => handleVideoClick(video)}
+                >
+                  <div className="flex items-center space-x-4">
+                    <div className="lg:w-200 lg:h-110">
+                      <img
+                        src={`https://img.youtube.com/vi/${
+                          video.url.split("/")[4]
+                        }/0.jpg`}
+                        alt={video.title}
+                        className="w-full h-full object-cover"
+                        width={100}
+                        height={100}
+                      />
                     </div>
                   </div>
-                ))}
-              </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
+      </div>
       </div>
     </>
   )
